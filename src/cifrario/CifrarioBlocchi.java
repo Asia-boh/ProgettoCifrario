@@ -20,7 +20,20 @@ public class CifrarioBlocchi {
 		}
 		return stringaCriptata;
 	}
+	public static String decripta(String informazioneCriptata, String key){
+		String newKey = "";
+		char lettera;
+		for(int i = 0; i < key.length(); i++) {
+			lettera = (char) (160 - key.charAt(i));
+			newKey += lettera;
+		}
+		return CifrarioBlocchi.cripta(informazioneCriptata, newKey);
+	}
 	public static void main(String args[]) {
-		System.out.println(CifrarioBlocchi.cripta("LAUREATO_1", "OLE"));
+		String info = "Se n'immondo ci fosse un po' di bene e ognun si honsiderasse su fratello, ci sarebbe meno pensieri e meno pene e il mondo ne sarebbe assai piu bello";
+		String key = "sesso boolean";
+		System.out.println(CifrarioBlocchi.cripta(info, key));
+		String infoCriptata = CifrarioBlocchi.cripta(info, key);
+		System.out.println(CifrarioBlocchi.decripta(infoCriptata, key));
 	}
 }
