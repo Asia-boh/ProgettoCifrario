@@ -18,4 +18,9 @@ public class CifraioDICesare {
 		return s1.toString();
 	}
 	
+	//metodo per decifrare il testo
+	
+	public static String Decifratura(String s1, int shift) {
+		return Cifratura(s1,26-shift);
+	}
 }
