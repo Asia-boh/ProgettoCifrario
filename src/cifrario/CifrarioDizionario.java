@@ -1,23 +1,34 @@
 package cifrario;
 
 public class CifrarioDizionario {
-	
-	// Funzione per cifrare il testo 
-	
-	public static  String Cifratura(String ; testoCifrario) {
-		StringBuilder s1= new StringBuilder();
-		for(int i=0; i<testoCifrario.length();i++) {
-			char c = testoCifrario.charAt(i);
-			if (Character.isLetter(c)) {
-			char charSpostato= (char)(((int)+ shift-'a')% 26 +'a');
-				s1.append(CifraturaDizionario.get(c));
-				
-			}else {
-				s1.append(c);
+	public static String cripta(String information) {
+		String stringCript="";
+		char letter;
+		for(int i=0;i < information.length();i++) {
+			letter=information.charAt(i);
+			if(information.charAt(i) >= 65 && information.charAt(i)<= 90) {
+				letter= (char)(122 -(information.charAt(i)+32 - 97));
 			}
+			if(information.charAt(i)>= 97 && information.charAt(i)<=122) {
+				letter= (char)(90 - (information.charAt(i)- 32 - 65));
+			}
+			stringCript += letter;
 		}
-	return cifrato.toString();
+		return stringCript;
 	}
+	public static String decripta(String information) {
+		return cripta(information);
+		
+	}
+	public static void main(String args[]) {
+		String information= "Ragazzuoli.... bada come la fuma ma che siehe grulli";
+		System.out.println(CifrarioDizionario.cripta(information));
+		String informationCriptata= CifrarioDizionario.cripta(information);
+		System.out.println(CifrarioDizionario.cripta(informationCriptata));
+	}
+}
+	
+	
 
 
 
