@@ -11,7 +11,7 @@ public class CifrarioadInversione {
 	public static String decifra(String codicecifrato) {
 		return cifra(codicecifrato);
 	}
-	public static void Main (String[]args) {
+	public static void main (String[]args) {
 		String codice = "Sono Paolo Bonolis";
 		String codicecifrato = cifra(codice);
 		System.out.println("Testo cifrato:"+ codicecifrato);

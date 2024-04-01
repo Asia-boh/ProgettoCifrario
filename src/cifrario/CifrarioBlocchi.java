@@ -1,6 +1,9 @@
 package cifrario;
 
 public class CifrarioBlocchi {
+	
+	// Asia Andrea Fusi: cifrario a blocchi
+	
 	public static String cripta(String informazione, String key){
 		String keyRipetuta = "";
 		int k = 0;
@@ -28,12 +31,5 @@ public class CifrarioBlocchi {
 			newKey += lettera;
 		}
 		return CifrarioBlocchi.cripta(informazioneCriptata, newKey);
-	}
-	public static void main(String args[]) {
-		String info = "Se n'immondo ci fosse un po' di bene e ognun si honsiderasse su fratello, ci sarebbe meno pensieri e meno pene e il mondo ne sarebbe assai piu bello";
-		String key = "sesso boolean";
-		System.out.println(CifrarioBlocchi.cripta(info, key));
-		String infoCriptata = CifrarioBlocchi.cripta(info, key);
-		System.out.println(CifrarioBlocchi.decripta(infoCriptata, key));
 	}
 }
