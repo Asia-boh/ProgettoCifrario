@@ -70,7 +70,7 @@ public class Main {
 				} catch (IOException e) {
 				}
 			}
-			System.out.println("questo è il codice cifrato:\n" + messaggio);
+			System.out.println("questo è il messaggio cifrato:\n" + messaggio);
 
 			for (int i = cifratura.size() - 1; i >= 0; i--) {
 				switch (cifratura.get(i)) {
@@ -91,7 +91,7 @@ public class Main {
 					break;
 				}
 			}
-			System.out.println("questo è il codice decifrato:\n" + messaggio);
+			System.out.println("questo è il messaggio decifrato:\n" + messaggio);
 		} catch (IOException e) {
 		}
 	}
