@@ -1,10 +1,10 @@
 package cifrario;
 
-public class CifraioDICesare {
+public class CifrarioDICesare {
 
 	//metodo per cifrare il testo
 	
-	public static String Cifratura(String testoCifrato, int shift) {
+	public static String cifratura(String testoCifrato, int shift) {
 		StringBuilder s1 = new StringBuilder();
 		for(int i=0; i<testoCifrato.length(); i++) {
 			char c = testoCifrato.charAt(i);
@@ -20,7 +20,7 @@ public class CifraioDICesare {
 	
 	//metodo per decifrare il testo
 	
-	public static String Decifratura(String s1, int shift) {
-		return Cifratura(s1,26-shift);
+	public static String decifratura(String s1, int shift) {
+		return cifratura(s1,26-shift);
 	}
 }
