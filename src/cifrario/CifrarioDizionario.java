@@ -1,6 +1,8 @@
 package cifrario;
 
 public class CifrarioDizionario {
+	// Matteo Mazzanti= CifrarioDizionario
+	
 	public static   String cripta(String Parolaordine) {
 		String stringCript="";
 		char letter;
