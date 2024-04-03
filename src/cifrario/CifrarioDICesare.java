@@ -8,10 +8,15 @@ public class CifrarioDICesare {
 		StringBuilder s1 = new StringBuilder();
 		for(int i=0; i<testoCifrato.length(); i++) {
 			char c = testoCifrato.charAt(i);
-			if(Character.isLetter(c)){
+			if(Character.isLowerCase(c)){
 				char charSpostato =(char)(((int)c+shift-'a') % 26 +'a');
 				s1.append(charSpostato);
-			}else {
+			}
+			else if(Character.isUpperCase(c)) {
+				char charSpostato =(char)(((int)c+shift-'A') % 26 +'A');
+				s1.append(charSpostato);
+			}
+				else {
 				s1.append(c);
 			}
 		}
